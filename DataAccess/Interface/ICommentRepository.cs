@@ -2,7 +2,7 @@
 
 namespace GraphQLDemo.DataAccess.Interface
 {
-    public interface ICommentsRepository:IGenericRepository<Comment>
+    public interface ICommentRepository:IGenericRepository<Comment>
     {
     }
 }

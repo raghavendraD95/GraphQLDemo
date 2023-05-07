@@ -4,10 +4,10 @@ namespace GraphQLDemo.DataAccess.Interface
 {
     public interface IGenericRepository<TEntity> where TEntity : BaseEntity
     {
-        IQueryable<TEntity> GetAll();
+        Task<List<TEntity>> GetAll();
         Task<TEntity?> GetById(int id);
-        Task Create(TEntity entity);
-        Task Update(TEntity entity);
-        Task Delete(int id);
+        Task<TEntity> Create(TEntity entity);
+        Task<TEntity> Update(TEntity entity);
+        Task<bool> Delete(int id);
     }
 }

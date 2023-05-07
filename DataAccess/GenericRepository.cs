@@ -12,33 +12,36 @@ namespace GraphQLDemo.DataAccess
         {
             _sampleDbContext = sampleDBContext;
         }
-        public async Task Create(TEntity entity)
+        public async Task<TEntity> Create(TEntity entity)
         {
             _sampleDbContext.Set<TEntity>().Update(entity);
             await _sampleDbContext.SaveChangesAsync();
+            return entity;
         }
 
-        public async Task Delete(int id)
+        public async Task<bool> Delete(int id)
         {
             var entity = await GetById(id);
             _sampleDbContext.Set<TEntity>().Remove(entity);
             await _sampleDbContext.SaveChangesAsync();
+            return true;
         }
 
-        public IQueryable<TEntity> GetAll()
+        public async Task<List<TEntity>> GetAll()
         {
-            return _sampleDbContext.Set<TEntity>().AsNoTracking();
+            return await _sampleDbContext.Set<TEntity>().ToListAsync();
         }
 
-        public Task<TEntity?> GetById(int id)
+        public async Task<TEntity?> GetById(int id)
         {
-            return _sampleDbContext.Set<TEntity>().SingleOrDefaultAsync(x => x.Id == id);
+            return await _sampleDbContext.Set<TEntity>().SingleOrDefaultAsync(x => x.Id == id);
         }
 
-        public async Task Update(TEntity entity)
+        public async  Task<TEntity> Update(TEntity entity)
         {
             _sampleDbContext.Set<TEntity>().Update(entity);
             await _sampleDbContext.SaveChangesAsync();
+            return entity;
         }
     }
 }

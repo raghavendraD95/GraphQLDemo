@@ -3,7 +3,7 @@ using GraphQLDemo.Models.Entities;
 
 namespace GraphQLDemo.DataAccess
 {
-    public class CommentRepository:GenericRepository<Comment>,ICommentsRepository
+    public class CommentRepository:GenericRepository<Comment>,ICommentRepository
     {
         public CommentRepository(SampleDBContext sampleDBContext): base(sampleDBContext) 
         {

@@ -1,0 +1,20 @@
+[
+    {
+        "Content": "Content 1",
+        "Likes": 23,
+        "Dislikes": 10,
+        "PostId": 1
+    },
+    {
+        "Content": "Content 2",
+        "Likes": 34,
+        "Dislikes": 20,
+        "PostId": 2
+    },
+    {
+        "Content": "Content 3",
+        "Likes": 45,
+        "Dislikes": 30,
+        "PostId": 3
+    }
+]
