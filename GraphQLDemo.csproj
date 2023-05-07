@@ -7,13 +7,21 @@
   </PropertyGroup>
 
   <ItemGroup>
-    <PackageReference Include="HotChocolate.AspNetCore" Version="13.0.5" />
-    <PackageReference Include="Microsoft.EntityFrameworkCore.InMemory" Version="6.0.15" />
-    <PackageReference Include="Swashbuckle.AspNetCore" Version="6.2.3" />
+    <Content Remove="DataAccess\DataFiles\Authors.json" />
+    <Content Remove="DataAccess\DataFiles\Comments.json" />
+    <Content Remove="DataAccess\DataFiles\Posts.json" />
   </ItemGroup>
 
   <ItemGroup>
-    <Folder Include="DataAccess\DataFiles\" />
+    <EmbeddedResource Include="DataAccess\DataFiles\Authors.json" />
+    <EmbeddedResource Include="DataAccess\DataFiles\Comments.json" />
+    <EmbeddedResource Include="DataAccess\DataFiles\Posts.json" />
+  </ItemGroup>
+
+  <ItemGroup>
+    <PackageReference Include="HotChocolate.AspNetCore" Version="13.0.5" />
+    <PackageReference Include="Microsoft.EntityFrameworkCore.InMemory" Version="6.0.15" />
+    <PackageReference Include="Swashbuckle.AspNetCore" Version="6.2.3" />
   </ItemGroup>
 
 </Project>

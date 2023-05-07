@@ -6,6 +6,6 @@
         public int Likes { get; set; }
         public List<Comment> Comments { get; set; } = new List<Comment>();
         public int AuthorId { get; set; }
-        public Author Author { get; set; } = new Author();
+        public Author? Author { get; set; }
     }
 }

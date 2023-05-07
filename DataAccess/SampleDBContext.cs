@@ -11,8 +11,23 @@ namespace GraphQLDemo.DataAccess
         }
         protected override void OnConfiguring(DbContextOptionsBuilder dbContextOptionsBuilder)
         {
-            dbContextOptionsBuilder.UseInMemoryDatabase(databaseName: "SampleDb");
         }
+
+        protected override void OnModelCreating(ModelBuilder modelBuilder)
+        {
+            modelBuilder.Entity<Author>(entity =>
+            {
+                entity.HasKey(e => e.Id);
+            });
+
+            modelBuilder.Entity<Post>(entity =>
+            {
+                entity.HasKey(e => e.Id);
+                entity.HasOne(d => d.Author).WithMany(p => p.Posts)
+                .HasForeignKey(d => d.AuthorId);
+            });
+        }
+
         public DbSet<Author> Authors { get; set; }
         public DbSet<Post> Posts { get; set; }
         public DbSet<Comment> Comments { get; set; }

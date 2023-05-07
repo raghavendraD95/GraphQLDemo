@@ -1,21 +1,20 @@
 [
-    {
-        "AuthorId":1,
-        "Id":1,
-        "Likes":10,
-        "Title":"First Post"
-    },
-    {
-        "AuthorId":2,
-        "Id":2,
-        "Likes":33,
-        "Title":"Second Post"
-    },
-    ,
-    {
-        "AuthorId":3,
-        "Id":3,
-        "Likes":107,
-        "Title":"Third Post"
-    }
+  {
+    "Id": 1,
+    "Likes": 10,
+    "Title": "First Post",
+    "AuthorId": 1
+  },
+  {
+    "Id": 2,
+    "Likes": 33,
+    "Title": "Second Post",
+    "AuthorId": 2
+  },
+  {
+    "Id": 3,
+    "Likes": 107,
+    "Title": "Third Post",
+    "AuthorId": 3
+  }
 ]
