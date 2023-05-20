@@ -30,6 +30,10 @@ app.UseAuthorization();
 
 app.MapControllers();
 
+app.UseSwagger();
+
+app.UseSwaggerUI();
+
 using (var scope = app.Services.CreateScope())
 {
     //3. Get the instance of BoardGamesDBContext in our services layer
