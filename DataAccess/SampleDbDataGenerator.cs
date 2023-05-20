@@ -13,17 +13,17 @@ namespace GraphQLDemo.DataAccess
             {
                 if (context.Posts.Any())
                 {
-                    return;
+                   return;
                 }
-                var authorText = File.ReadAllText(@"./DataAccess/Datafiles/Authors.json");
+                var authorText = File.ReadAllText(@"./DataAccess/DataFiles/Authors.json");
                 var authorsData = JsonSerializer.Deserialize<List<Author>>(authorText);
                 context.Authors.AddRange(authorsData);
                
-                var commentsText = File.ReadAllText(@"./DataAccess/datafiles/Comments.json");
+                var commentsText = File.ReadAllText(@"./DataAccess/dataFiles/Comments.json");
                 var commentsData = JsonSerializer.Deserialize<List<Comment>>(commentsText);
                 context.Comments.AddRange(commentsData);
 
-                var postsText = File.ReadAllText(@"./DataAccess/datafiles/Posts.json");
+                var postsText = File.ReadAllText(@"./DataAccess/dataFiles/Posts.json");
                 var postsData = JsonSerializer.Deserialize<List<Post>>(postsText);
                 context.Posts.AddRange(postsData);
 

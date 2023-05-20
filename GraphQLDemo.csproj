@@ -7,19 +7,19 @@
   </PropertyGroup>
 
   <ItemGroup>
-    <Content Remove="DataAccess\DataFiles\Authors.json" />
-    <Content Remove="DataAccess\DataFiles\Comments.json" />
-    <Content Remove="DataAccess\DataFiles\Posts.json" />
+    <Content Remove="DataFiles\Authors.json" />
+    <Content Remove="DataFiles\Comments.json" />
+    <Content Remove="DataFiles\Posts.json" />
   </ItemGroup>
 
   <ItemGroup>
-    <EmbeddedResource Include="DataAccess\DataFiles\Authors.json">
+    <EmbeddedResource Include="DataFiles\Authors.json">
       <CopyToOutputDirectory>Always</CopyToOutputDirectory>
     </EmbeddedResource>
-    <EmbeddedResource Include="DataAccess\DataFiles\Comments.json">
+    <EmbeddedResource Include="DataFiles\Comments.json">
       <CopyToOutputDirectory>Always</CopyToOutputDirectory>
     </EmbeddedResource>
-    <EmbeddedResource Include="DataAccess\DataFiles\Posts.json">
+    <EmbeddedResource Include="DataFiles\Posts.json">
       <CopyToOutputDirectory>Always</CopyToOutputDirectory>
     </EmbeddedResource>
   </ItemGroup>
