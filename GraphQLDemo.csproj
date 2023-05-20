@@ -13,9 +13,15 @@
   </ItemGroup>
 
   <ItemGroup>
-    <EmbeddedResource Include="DataAccess\DataFiles\Authors.json" />
-    <EmbeddedResource Include="DataAccess\DataFiles\Comments.json" />
-    <EmbeddedResource Include="DataAccess\DataFiles\Posts.json" />
+    <EmbeddedResource Include="DataAccess\DataFiles\Authors.json">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </EmbeddedResource>
+    <EmbeddedResource Include="DataAccess\DataFiles\Comments.json">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </EmbeddedResource>
+    <EmbeddedResource Include="DataAccess\DataFiles\Posts.json">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </EmbeddedResource>
   </ItemGroup>
 
   <ItemGroup>
