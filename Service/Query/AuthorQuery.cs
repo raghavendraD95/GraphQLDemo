@@ -8,7 +8,7 @@ namespace GraphQLDemo.Service.Query
     {
         public List<Author> GetAuthors([Service] SampleDBContext dBContext)
         {
-            return dBContext.Authors.Include(x=>x.Posts).ToList();
+            return dBContext.Authors.Include(x=>x.Posts).ThenInclude(post=>post.Comments).ToList();
         }
         public Author? GetAuthor([Service] SampleDBContext dBContext, int id)
         {

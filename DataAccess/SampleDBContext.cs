@@ -26,6 +26,13 @@ namespace GraphQLDemo.DataAccess
                 entity.HasOne(d => d.Author).WithMany(p => p.Posts)
                 .HasForeignKey(d => d.AuthorId);
             });
+
+            modelBuilder.Entity<Comment>(entity =>
+            {
+                entity.HasKey(e => e.Id);
+                entity.HasOne(d => d.Post).WithMany(p => p.Comments)
+                .HasForeignKey(d => d.PostId);
+            });
         }
 
         public DbSet<Author> Authors { get; set; }
